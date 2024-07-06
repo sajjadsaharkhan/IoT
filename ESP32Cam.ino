@@ -397,7 +397,7 @@ void configCamera() {
   config.xclk_freq_hz = 20000000;
   config.pixel_format = PIXFORMAT_JPEG;
   config.frame_size = FRAMESIZE_SVGA;  // Change to lower resolution, e.g., FRAMESIZE_SVGA
-  config.jpeg_quality = 10;            // Adjust JPEG quality (higher value = lower quality)
+  config.jpeg_quality = 15;            // Adjust JPEG quality (higher value = lower quality)
   config.fb_count = 1;
 
   // Camera init
