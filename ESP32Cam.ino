@@ -343,7 +343,7 @@
 #include <Arduino.h>
 #include <WiFi.h>
 #include <HTTPClient.h>
-#include "Base64.h"
+#include "base64.h"
 
 // Define the signal pin
 #define SIGNAL_PIN 4
@@ -352,7 +352,7 @@ const int LED_PIN = 2;
 
 const char* ssid = "Note";
 const char* password = "12345678";
-String serverName = "https://kashan-iot.liara.run/api/upload";
+String serverName = "http://82.115.18.157:8080/api/upload";
 
 void print(const char c[]) {
   Serial.print("Cam Serial: ");
@@ -396,8 +396,8 @@ void configCamera() {
   config.pin_xclk = XCLK_GPIO_NUM;
   config.xclk_freq_hz = 20000000;
   config.pixel_format = PIXFORMAT_JPEG;
-  config.frame_size = FRAMESIZE_QVGA;  // Change to lower resolution, e.g., FRAMESIZE_SVGA
-  config.jpeg_quality = 30;            // Adjust JPEG quality (higher value = lower quality)
+  config.frame_size = FRAMESIZE_SVGA;  // Change to lower resolution, e.g., FRAMESIZE_SVGA
+  config.jpeg_quality = 10;            // Adjust JPEG quality (higher value = lower quality)
   config.fb_count = 1;
 
   // Camera init
